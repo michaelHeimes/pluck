@@ -46,7 +46,7 @@ get_header(); ?>
                 
                 <?php
                 while ( $loop->have_posts() ) : $loop->the_post();?>
-                <div class="flex-row v-center">
+                <div class="flex-row v-center tm-row">
                     <?php if( !empty( get_field('photo') ) ) {
                         $imgID = get_field('photo')['ID'];
                         $img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
@@ -68,7 +68,7 @@ get_header(); ?>
                         <p class="excerpt"><?php the_field('excerpt_for_about_page');?></p>
                         <?php endif;?>
                         <a class="permalink" href="<?php the_permalink();?>">
-                            Read More...
+                            <b><span>Read More</span>...</b>
                         </a>
                     </div>
                     <?php endif;?>

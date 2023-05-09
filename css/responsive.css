@@ -78,7 +78,9 @@ p { line-height: 1.7; }
 .recent_news h2 { font-size: 30px; }
 .cta_bar .btn { width: 120px; height: 45px; }
 .cta_bar { min-height:300px; }
-
+.page-template-about .about-content p:not(.person-info) {
+	font-size: 20px;
+}
 .content_bar h2 { padding-bottom: 30px; }
 .content_bar .listing { padding: 20px; }
 .content_bar .listing li { padding-bottom: 10px; }
@@ -125,15 +127,27 @@ html, body { font-size: 14px; }
 #header-part .logo { max-width: 83px; }
 .centering { padding: 0 35px; }
 #header-part { padding: 20px 20px 20px 30px; }
+.inner_banner_bar h1 { font-size: 30px;}
 .banner_bar .text { padding:0; width: 100%; }
 .banner_bar .text h1 { font-size: 30px; }
 .testimonials h2.home-testimonial-header { font-size: 30px; padding-bottom: 2rem;}
 .t-row .quote-text p {font-size: 20px;}
 .t-row .mark {font-size: 30px; }
 .t-row .quote-text p {font-size: 16px;}
+.page-template-about .photo-wrap {
+	flex: 0 0 150px;
+}
+.page-template-about .text-wrap {
+	flex: 0 0 100%;
+	padding-top: 30px;
+	padding-left: 0;
+}
 p.person-info { 
 	font-size: 15px; 
 	padding-top: .6rem;
+}
+.page-template-about .about-content p:not(.person-info) {
+	font-size: 17px;
 }
 .banner_bar .text p { font-size: 15px; }
 .banner_bar .navigation { width: 100%; margin:30px 0 0 0; }
