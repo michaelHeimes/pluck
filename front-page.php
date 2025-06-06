@@ -88,49 +88,6 @@ get_header(); ?>
         </div>
     </div>
 	<!--services_bar-->
-    
-    <?php if( !empty( get_field('testimonials_heading') ) || !empty( get_field('testimonials') ) ):?>
-    <div class="testimonials">
-        <div class="centering">
-            <?php if( !empty( get_field('testimonials_heading') ) ):?>
-            <h2 class="h1 home-testimonial-header"><?php the_field('testimonials_heading');?></h2>
-            <?php endif;?>
-            <?php if( !empty( get_field('testimonials') ) ):
-                $testimonials = get_field('testimonials');?>
-            <div class="testimonial-rows">
-                <?php foreach($testimonials as $testimonial):
-                    $quote_text = $testimonial['quote_text']; 
-                    $author_name = $testimonial['author_name']; 
-                    $author_info = $testimonial['author_info'];    
-                ?>
-                <div class="t-row">
-                    <div class="mark">
-                        <b>“</b>
-                    </div>
-                    <div>
-                        <?php if( !empty($quote_text) ):?>
-                        <div class="quote-text"><?php echo $quote_text;?></div>
-                        <?php endif;?>
-                        <?php if( !empty( $author_name) || !empty( $author_info) ):?>
-                        <p class="person-info">
-                            <b>
-                            <?php echo $author_name;?>
-                            <?php if( !empty( $author_info) ) {
-                            echo '<br>';
-                            echo $author_info;
-                            };?>
-                            </b>
-                        </p>
-                        <?php endif;?>
-                    </div>
-                </div>  
-                <?php endforeach;?>
-            </div>
-            <?php endif;?>
-        
-        </div>
-    </div>
-    <?php endif;?>
 
 	<!--recent solutions-->
 	<div class="recent_solutions">

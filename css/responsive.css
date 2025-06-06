@@ -14,8 +14,6 @@
 #header-part.show { padding: 15px 20px; }
 .banner_bar .text { padding: 40px 50px 0 20px }
 .banner_bar .text h1 { font-size: 50px; }
-.testimonials h2.home-testimonial-header { font-size: 50px; }
-.t-row .mark { font-size: 50px; }
 .banner_bar .text p { padding-bottom: 20px; }
 .banner_bar .flex-row { padding: 90px 0 60px; min-height: 550px; }
 .welcome_bar .text { width: 68.4%; padding: 40px 40px 40px 40px; }
@@ -60,9 +58,6 @@ p { line-height: 1.7; }
 .banner_bar .navigation { width: 325px; }
 .banner_bar .text { width: calc(100% - 340px); }
 .banner_bar .text h1 { font-size: 38px; padding-bottom: 10px; }
-.t-row .mark { font-size: 38px; padding-bottom: 10px; }
-.t-row .quote-text p {font-size: 22px;}
-.testimonials h2.home-testimonial-header { font-size: 38px; padding-bottom: 3.1rem; }
 .banner_bar .text p { font-size: 18px; }
 .banner_bar .flex-row { min-height:450px; }
 .welcome_bar .text { width: 68.4%; padding: 40px 20px 40px 20px; }
@@ -78,9 +73,7 @@ p { line-height: 1.7; }
 .recent_news h2 { font-size: 30px; }
 .cta_bar .btn { width: 120px; height: 45px; }
 .cta_bar { min-height:300px; }
-.page-template-about .about-content p:not(.person-info) {
-	font-size: 20px;
-}
+
 .content_bar h2 { padding-bottom: 30px; }
 .content_bar .listing { padding: 20px; }
 .content_bar .listing li { padding-bottom: 10px; }
@@ -88,13 +81,13 @@ p { line-height: 1.7; }
 .about_bar .right_side { width: 250px; padding-left: 40px; }
 .about_bar .left_side { padding: 0 40px 0 0; width: calc(100% - 250px); }
 .about_bar .info_block:before { left:-40px; width: 20px;}
-.about_bar h3, .about-content h3 { font-size: 20px; }
+.about_bar h3 { font-size: 20px; }
 .about_bar .desc { font-size: 15px; }
 .about_bar h6 { letter-spacing: 0.04em; }
 .about_bar .info_list li { font-size: 15px; line-height: 1.2; padding-bottom: 10px; }
-.about_bar h2 .about-content h2 { font-size: 28px; padding-bottom: 20px; }
+.about_bar h2 { font-size: 28px; padding-bottom: 20px; }
 .about_bar { padding: 80px 0; }
-.about_bar p, .about-content p{ padding-bottom: 20px; }
+.about_bar p { padding-bottom: 20px; }
 .solution_bar .left_side .resp-tab-item { font-size: 16px; padding-left:35px; padding-bottom: 15px; }
 .solution_bar .left_side .resp-tab-item:before { font-size: 25px; }
 .solution_bar .left_side { padding-top:50px; }
@@ -127,28 +120,8 @@ html, body { font-size: 14px; }
 #header-part .logo { max-width: 83px; }
 .centering { padding: 0 35px; }
 #header-part { padding: 20px 20px 20px 30px; }
-.inner_banner_bar h1 { font-size: 30px;}
 .banner_bar .text { padding:0; width: 100%; }
 .banner_bar .text h1 { font-size: 30px; }
-.testimonials h2.home-testimonial-header { font-size: 30px; padding-bottom: 2rem;}
-.t-row .quote-text p {font-size: 20px;}
-.t-row .mark {font-size: 30px; }
-.t-row .quote-text p {font-size: 16px;}
-.page-template-about .photo-wrap {
-	flex: 0 0 150px;
-}
-.page-template-about .text-wrap {
-	flex: 0 0 100%;
-	padding-top: 30px;
-	padding-left: 0;
-}
-p.person-info { 
-	font-size: 15px; 
-	padding-top: .6rem;
-}
-.page-template-about .about-content p:not(.person-info) {
-	font-size: 17px;
-}
 .banner_bar .text p { font-size: 15px; }
 .banner_bar .navigation { width: 100%; margin:30px 0 0 0; }
 .banner_bar .flex-row { padding: 80px 35px 50px; }
@@ -199,7 +172,7 @@ blockquote p { font-size: 20px; }
 .content_bar .right { padding: 0 0 20px 0px; width: 100%; }
 .featured_post_bar { padding: 60px 0; }
 .inner_banner_bar { min-width:220px; }
-.about_bar, .about-content { padding: 40px 0; }
+.about_bar { padding: 40px 0; }
 .about_bar .right_side { width: 100%; padding-left: 40px; order:-1; }
 .about_bar .left_side { padding: 0 0px 0 0; width: 100%; padding: 40px 0 0 0; }
 

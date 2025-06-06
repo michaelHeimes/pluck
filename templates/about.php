@@ -21,106 +21,107 @@ get_header(); ?>
     <?php }?>
 
 	<!--about_bar-->
-	<div class="content about-content">
+	<div class="about_bar">
     	<div class="centering">
-        	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-				<?php the_content();?>
-            <?php endwhile; endif;?>
+        
+            <div class="flex-row">
+				<div class="left_side">
+                	 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+						<?php the_content(); ?>
+	                <?php endwhile; endif;?>
+                </div>                
+
+				<div class="right_side">
+					<!--avatar image-->
+                    <?php if(get_field('about_sidebar_image')) {?>
+						<img class="avatar" src="<?php the_field('about_sidebar_image')?>" alt="" />
+					<?php }?>
+					<!--avatar image-->
+                    
+					<?php if( have_rows('about_sidebar_list') ): ?>
+                        <ul class="sidebar">
+                    <?php while( have_rows('about_sidebar_list') ): the_row(); ?>
+                        
+                        <!--short_info-->
+                        <?php if( get_row_layout() == 'short_info' ): ?>
+                            <li class="info_block">
+                                <?php if(get_sub_field('name')) {?>
+                                    <h3><?php the_sub_field('name')?></h3>
+                                <?php }?>
+
+                                <?php if(get_sub_field('description')) {?>
+                                    <span class="desc"><?php the_sub_field('description')?></span>
+                                <?php }?>
+                                
+                                <?php if(have_rows('social_list')) : ?>
+                                    <ul class="social_list">
+                                    <?php while(have_rows('social_list')) : the_row(); 
+                                    //vars
+                                    $icon = get_sub_field('icon');
+                                    $link = get_sub_field('link');
+                                    ?>
+                                        <li>
+                                            <a href="<?php echo $link; ?>" target="_blank"><?php echo $icon; ?></a>
+                                        </li>
+                                    <?php endwhile; ?>
+                                    </ul>
+                                <?php endif; ?>
+                                
+                            </li>
+                
+                        <!--other_info_list-->
+                        <?php elseif( get_row_layout() == 'other_info' ):?>
+                            
+                                <?php if(have_rows('other_info_list')) : ?>
+                                        <?php while(have_rows('other_info_list')) : the_row(); 
+                                        //vars
+                                        $list_title = get_sub_field('list_title');
+                                        ?>
+                                        <li class="info_block">
+                                            <h6><?php echo $list_title; ?></h6>
+                                        
+                                            <?php if(have_rows('list_content')) : ?>
+                                                <ul class="info_list">
+                                                <?php while(have_rows('list_content')) : the_row(); 
+                                                //vars
+                                                $list_item = get_sub_field('list_item');
+                                                ?>
+                                                    <li><?php echo $list_item; ?></li>
+                                                <?php endwhile; ?>
+                                                </ul>
+                                            <?php endif; ?>
+
+                                        </li>
+                                        <?php endwhile; ?>
+                                <?php endif; ?>
+
+
+                            </li>
+                            
+                        <?php ?>
+
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                        </ul>
+                    <?php endif; ?>
+
+                </div>                
+            </div>
+        
         </div>    
     </div>
 	<!--about_bar-->
-    
-    <?php			
-    $args = array(  
-        'post_type' => 'team_member',
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-    );
-    
-    $loop = new WP_Query( $args ); 
-    
-    if ( $loop->have_posts() ) :?>
-        <div class="team-members about-content">
-            <div class="centering">
-                <h2>The Team</h2>
-                
-                <?php
-                while ( $loop->have_posts() ) : $loop->the_post();?>
-                <div class="flex-row v-center tm-row">
-                    <?php if( !empty( get_field('photo') ) ) {
-                        $imgID = get_field('photo')['ID'];
-                        $img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-                        $img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-                        echo '<div class="photo-wrap">';
-                        echo $img;
-                        echo '</div>';
-                        
-                    }?>
-                    <?php if( !empty( get_field('job_title') ) || !empty( get_field('excerpt_for_about_page') ) ):?>
-                    <div class="text-wrap">
-                        <h3><?php the_title();?></h3>
-                        <?php if( !empty( get_field('job_title') ) ):?>
-                        <p class="person-info">
-                            <b><?php the_field('job_title');?></b>
-                        </p>    
-                        <?php endif;?>
-                        <?php if( !empty( get_field('excerpt_for_about_page') ) ):?>
-                        <p class="excerpt"><?php the_field('excerpt_for_about_page');?></p>
-                        <?php endif;?>
-                        <a class="permalink" href="<?php the_permalink();?>">
-                            <b><span>Read More</span>...</b>
-                        </a>
-                    </div>
-                    <?php endif;?>
-                </div>
-                <?php
-                endwhile;
-                ?>
-            </div>
-        </div>
-    <?php
-    endif;
-    wp_reset_postdata(); 
-    ?>
-    
-    <?php if( !empty( get_field('testimonials') ) ):?>
-    <div class="testimonials">
-        <div class="centering">
-            <?php if( !empty( get_field('testimonials') ) ):
-                $testimonials = get_field('testimonials');?>
-            <div class="testimonial-rows">
-                <?php foreach($testimonials as $testimonial):
-                    $quote_text = $testimonial['quote_text']; 
-                    $author_name = $testimonial['author_name']; 
-                    $author_info = $testimonial['author_info'];    
-                ?>
-                <div class="t-row">
-                    <div class="mark">
-                        <b>“</b>
-                    </div>
-                    <div>
-                        <?php if( !empty($quote_text) ):?>
-                        <div class="quote-text"><?php echo $quote_text;?></div>
-                        <?php endif;?>
-                        <?php if( !empty( $author_name) || !empty( $author_info) ):?>
-                        <p class="person-info">
-                            <b>
-                            <?php echo $author_name;?>
-                            <?php if( !empty( $author_info) ) {
-                            echo '<br>';
-                            echo $author_info;
-                            };?>
-                            </b>
-                        </p>
-                        <?php endif;?>
-                    </div>
-                </div>  
-                <?php endforeach;?>
-            </div>
-            <?php endif;?>
+
+	<!--cta_bar-->
+	<div class="flex-row v-center cta_bar" style="background-image: url('<?php the_field('cta_banner','option')?>')">
+    	<div class="centering">
+			
+            <?php the_field('cta_content','option'); ?>
+            <?php $cta_button = get_field('cta_banner_button','option'); ?>
+            <a href="<?php echo $cta_button['url']?>" class="btn">Button</a>
         
         </div>
     </div>
-    <?php endif;?>
+	<!--cta_bar-->
 
 <?php get_footer(); ?>

@@ -150,8 +150,8 @@ input[type="password"]:focus,
 .banner_bar .text .more:hover, .banner_bar .text p a:hover { box-shadow: 0px -7px 0px  #99d5d7 inset; -webkit-box-shadow: 0px -7px 0px #99d5d7 inset; text-decoration: none; } 
 
 /*inner_banner_bar*/
-.inner_banner_bar { padding: 80px 0 80px; text-align: center; display: flex; -webkit-display: flex; flex-wrap:wrap; -webkit-flex-wrap:wrap; align-items:center; -webkit-align-items:center; min-height:370px; background-position: center center; background-size:cover; }
-.inner_banner_bar h1 { font-size: 60px; font-weight:700; text-transform: uppercase; color: #fff; letter-spacing: 0.15em; display: flex; -webkit-display: flex; align-items:center; -webkit-align-items:center; justify-content:center; -webkit-justify-content:center; }
+.inner_banner_bar { padding: 110px 0 80px; text-align: center; display: flex; -webkit-display: flex; flex-wrap:wrap; -webkit-flex-wrap:wrap; align-items:center; -webkit-align-items:center; min-height:370px; background-position: center center; background-size:cover; }
+.inner_banner_bar h1 { font-size: 15px; font-weight:700; text-transform: uppercase; color: #fff; letter-spacing: 0.15em; display: flex; -webkit-display: flex; align-items:center; -webkit-align-items:center; justify-content:center; -webkit-justify-content:center; }
 .inner_banner_bar h1 img { margin: 0 15px 0 -65px; }
 
 /* content-part */
@@ -174,100 +174,6 @@ input[type="password"]:focus,
 .services_bar h3 a { color: #182938; }
 .services_bar h3 a:hover { color: #496382; }
 .services_bar p { padding:0; line-height: 1.9; }
-
-/* Testimonials */
-.testimonials h2.home-testimonial-header {
-	padding-bottom: 20px; 
-	font-size: 60px; 
-	line-height: 1.24; 
-	font-weight: 500;
-}
-
-.t-row {
-	display: flex;
-	padding-bottom: 2.6rem;
-}
-
-.t-row .mark {
-	text-align: center;
-	font-family: 'Source Sans Pro', sans-serif;
-	color: #3E64AD;
-	font-size: 60px;
-	transform: translateY(-13px);
-	width: 6.1%;
-	flex: 0 0 6.1%;
-}
-
-.t-row .quote-text p {
-	font-size: 24px;
-	line-height: 1.5416;
-}
-
-p.person-info {
-	font-size: 18px;
-	line-height: 1.5;
-	padding-top: 0.85rem;
-}
-
-/* Team Member */
-.single-team_member .inner_banner_bar {
-	padding: 0;
-	min-height: 107px;
-}
-
-/* About Page */
-.content.about-content {
-	padding-bottom: 32px;
-}
-.page-template-about .about-content h2 {
-	padding-top: 34px;
-}
-.page-template-about .about-content h3 {
-	padding-bottom: 14px;
-}
-.page-template-about .about-content p:not(.person-info) {
-	font-size: 24px;
-	line-height: 1.29;
-}
-.page-template-about .team-members.about-content {
-	padding-top: 0;
-}
-
-.page-template-about .tm-row:not(:last-child) {
-	padding-bottom: 74px;
-}
-
-.page-template-about .photo-wrap {
-	flex: 0 0 224px;
-}
-.page-template-about .text-wrap {
-	flex: 1;
-	padding-left: 44px;
-}
-
-.page-template-about .text-wrap h3 {
-	line-height: 1.05;
-	padding-bottom: 0;
-}
-
-.page-template-about .text-wrap p.excerpt {
-	padding-bottom: 5px;
-}
-
-.page-template-about .text-wrap a.permalink {
-	font-size: 18px;
-	color: #3E64AD;
-	position: relative;
-}
-
-.page-template-about .text-wrap a.permalink span {
-	text-decoration: underline;
-}
-
-.page-template-about .testimonials {
-	padding-top: 36px;
-	padding-bottom: 27px;
-}
 
 /* recent_solutions */
 .recent_solutions { width: 100%; }
@@ -334,14 +240,14 @@ p.person-info {
 .featured_post_bar .slick-arrow:hover { opacity:0.70; }
 
 /* about_bar */
-.about_bar, .about-content { padding: 86px 0 80px; width: 100%; }
+.about_bar { padding: 125px 0 125px; width: 100%; }
 .about_bar .centering { max-width: 1010px; }
-.about_bar h2, .about-content h2 { padding-bottom: 40px; font-size: 33px; font-weight:300; }
-.about_bar h3, .about-content h3 { padding-bottom:5px; letter-spacing:-0.025em; font-size: 25px; font-weight:700; }
+.about_bar h2 { padding-bottom: 40px; font-size: 33px; font-weight:300; }
+.about_bar h3 { padding-bottom:5px; letter-spacing:-0.025em; font-size: 25px; font-weight:700; }
 .about_bar .left_side { padding: 0 65px 0 0; width: calc(100% - 310px); }
 .about_bar .right_side { padding: 5px 0 0 50px; width: 310px; border-left: 2px solid #8b949b; }
 .about_bar .avatar { margin-bottom: 45px; max-width: 145px; }
-.about_bar p, .about-content p { padding-bottom: 30px; }
+.about_bar p { padding-bottom: 30px; }
 .about_bar .right_side ul { list-style:none; margin:0; padding:0; }
 .about_bar .right_side h3 { letter-spacing: -0.04em; }
 .about_bar .desc { padding-bottom: 20px; font-size: 16px; display: block; }
