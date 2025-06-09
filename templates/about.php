@@ -46,7 +46,7 @@ get_header(); ?>
                 
                 <?php
                 while ( $loop->have_posts() ) : $loop->the_post();?>
-                <div class="flex-row v-center tm-row">
+                <div class="flex-row tm-row">
                     <?php if( !empty( get_field('photo') ) ) {
                         $imgID = get_field('photo')['ID'];
                         $img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );

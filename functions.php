@@ -1,4 +1,10 @@
 <?php
+
+if ( ! defined( '_S_VERSION' ) ) {
+	// Replace the version number of the theme on each release.
+	define( '_S_VERSION', '1.0.1' );
+}
+
 /**
  * SSXTHEME functions and definitions.
  *
@@ -72,20 +78,20 @@ function ssxtheme_scripts_styles() {
 		wp_enqueue_script( 'jquery-masonry' );
 
 	// Loads JavaScript file with functionality specific to SSXTHEME.
-	wp_enqueue_script( 'ssxtheme-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), date('Y-m-d'), true );
-	wp_enqueue_script( 'Custom Js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), date('Y-m-d'), true );
-	wp_enqueue_script( 'slick Js', get_template_directory_uri() . '/js/slick.js', array( 'jquery' ), date('Y-m-d'), true );
-	wp_enqueue_script( 'tab Js', get_template_directory_uri() . '/js/easy-responsive-tabs.js', array( 'jquery' ), date('Y-m-d'), true );
+	wp_enqueue_script( 'ssxtheme-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), _S_VERSION, true );
+	wp_enqueue_script( 'Custom Js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), _S_VERSION, true );
+	wp_enqueue_script( 'slick Js', get_template_directory_uri() . '/js/slick.js', array( 'jquery' ), _S_VERSION, true );
+	wp_enqueue_script( 'tab Js', get_template_directory_uri() . '/js/easy-responsive-tabs.js', array( 'jquery' ), _S_VERSION, true );
 
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'ssxtheme-style', get_stylesheet_uri(), array(), date('Y-m-d') );
-	wp_enqueue_style( 'responsive-css', get_template_directory_uri()."/css/responsive.css", array(), date('Y-m-d') );
-	wp_enqueue_style( 'tab-css', get_template_directory_uri()."/css/easy-responsive-tabs.css", array(), date('Y-m-d') );
-	wp_enqueue_style( 'slick-css', get_template_directory_uri()."/css/slick.css", array(), date('Y-m-d') );
-	wp_enqueue_style( 'icon-css', get_template_directory_uri()."/icons/icons.css", array(), date('Y-m-d') );
+	wp_enqueue_style( 'ssxtheme-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'responsive-css', get_template_directory_uri()."/css/responsive.css", array(), _S_VERSION );
+	wp_enqueue_style( 'tab-css', get_template_directory_uri()."/css/easy-responsive-tabs.css", array(), _S_VERSION );
+	wp_enqueue_style( 'slick-css', get_template_directory_uri()."/css/slick.css", array(), _S_VERSION );
+	wp_enqueue_style( 'icon-css', get_template_directory_uri()."/icons/icons.css", array(), _S_VERSION );
 
 	// Loads the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'ssxtheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'ssxtheme-style' ), date('Y-m-d') );
+	wp_enqueue_style( 'ssxtheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'ssxtheme-style' ), _S_VERSION );
 	wp_style_add_data( 'ssxtheme-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'ssxtheme_scripts_styles' );

@@ -14,7 +14,9 @@
 #header-part.show { padding: 15px 20px; }
 .banner_bar .text { padding: 40px 50px 0 20px }
 .banner_bar .text h1 { font-size: 50px; }
-.testimonials h2.home-testimonial-header { font-size: 50px; }
+.testimonials h2.home-testimonial-header,
+.page-template-home .team-header h2,
+.page-template-home .how-we-help h2 { font-size: 50px; }
 .t-row .mark { font-size: 50px; }
 .banner_bar .text p { padding-bottom: 20px; }
 .banner_bar .flex-row { padding: 90px 0 60px; min-height: 550px; }
@@ -43,7 +45,9 @@
 
 
 
-
+.page-template-home .how-we-help .title-rows {
+	padding: 60px 32px 50px 32px;
+}
 
 
 
@@ -62,7 +66,10 @@ p { line-height: 1.7; }
 .banner_bar .text h1 { font-size: 38px; padding-bottom: 10px; }
 .t-row .mark { font-size: 38px; padding-bottom: 10px; }
 .t-row .quote-text p {font-size: 22px;}
-.testimonials h2.home-testimonial-header { font-size: 38px; padding-bottom: 3.1rem; }
+.testimonials h2.home-testimonial-header,
+.page-template-home .team-header h2,
+.page-template-home .how-we-help h2 { font-size: 38px; padding-bottom: 3.1rem; }
+.page-template-home .team-header h2 { padding-bottom: 0; }
 .banner_bar .text p { font-size: 18px; }
 .banner_bar .flex-row { min-height:450px; }
 .welcome_bar .text { width: 68.4%; padding: 40px 20px 40px 20px; }
@@ -110,6 +117,63 @@ p { line-height: 1.7; }
 .contact_bar .your-challenge .wpcf7-form-control { width: 300px; }
 .contact_bar .your-phone .wpcf7-form-control { width: 150px; }
 .contact_bar .your-email .wpcf7-form-control { width:220px; }
+
+.page-template-home .banner_bar .text h1 {
+	font-size: 60px;
+}
+
+.page-template-home .team {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.page-template-home .tm-row .tm-member {
+	width: 33.33333%;
+	flex: 0 0 33.33333%;
+}
+
+.page-template-home .tm-row .tm-member a {
+	max-width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-template-home .tm-row .tm-member .photo-wrap {
+	margin-bottom: 30px;
+}
+
+
+.page-template-home .how-we-help .title-rows {
+	padding: 60px 32px 50px 32px;
+}
+
+.page-template-home .how-we-help ul {
+	list-style: none;
+	padding-top: 16px;
+	padding-left: 0px;
+}
+.page-template-home .how-we-help ul li > div {
+	flex: 0 0 calc(100% - 32px)
+}
+
+.page-template-home .how-we-help ul li h3 {
+	font-size: 28px;
+	padding: 0px 0 0 16px;
+	transform: translateY(-2px);
+}
+
+.page-template-home .how-we-help ul li p {
+	padding: 4px 0 24px 32px;
+	font-size: 16px;
+}
+
+.page-template-home .how-we-help ul li:before {
+	width: 32px;
+	height: 32px;
+	flex: 0 0 32px;
+}
+
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -130,7 +194,10 @@ html, body { font-size: 14px; }
 .inner_banner_bar h1 { font-size: 30px;}
 .banner_bar .text { padding:0; width: 100%; }
 .banner_bar .text h1 { font-size: 30px; }
-.testimonials h2.home-testimonial-header { font-size: 30px; padding-bottom: 2rem;}
+.testimonials h2.home-testimonial-header,
+.page-template-home .team-header h2,
+.page-template-home .how-we-help h2,
+.page-template-home .how-we-help h2 { font-size: 30px; padding-bottom: 2rem;}
 .t-row .quote-text p {font-size: 20px;}
 .t-row .mark {font-size: 30px; }
 .t-row .quote-text p {font-size: 16px;}
@@ -223,10 +290,32 @@ blockquote p { font-size: 20px; }
 table { margin-bottom: 15px; }
 .content-bar { padding: 20px 0; }
 .contact_bar { padding-bottom: 50px; }
+
+
+.page-template-home .banner_bar .text h1 {
+	font-size: 40px;
+}
+
+.page-template-home .tm-row .tm-member {
+	width: 50%;
+	flex: 0 0 50%;
+}
+
+.page-template-home .team-header {
+	flex-direction: column;
+	gap: 0;	
+}
+
+.page-template-home .tm-row .tm-member a {
+	max-width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
 }
 
 @media only screen and (max-width: 639px) {
-
 
 
 
@@ -242,13 +331,21 @@ table { margin-bottom: 15px; }
 .leftBlogBox #commentform { margin-top: 20px; }
 .mobilesidebar { display: block; width: 100%; }
 
+.page-template-home .how-we-help .title-rows {
+	padding: 60px 32px 50px 32px;
+}
+
 }
 
 @media only screen and (max-width: 479px) {
-
-
-
-
+.page-template-home .tm-row .tm-member {
+	width: 100%;
+	flex: 0 0 100%;
+	margin-bottom: 30px;
+}
+.page-template-home .tm-row .tm-member .photo-wrap {
+	margin-bottom: 20px;
+}
 
 caption, th, td { float: left; padding-left: 0; padding-right: 0; width: 100%; }
 caption, th, td { float: left; padding-left: 0; padding-right: 0; width: 100%; }
