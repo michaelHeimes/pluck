@@ -55,6 +55,23 @@
 
 }
 
+
+
+@media screen and (min-width: 1024px) {
+	.desktop-nav {
+		display: block;	
+	}
+	.mobile-nav {
+		display: none;
+	}
+	#header-part {
+		display: flex;
+		align-items: center;
+	}
+}
+
+
+
 @media only screen and (max-width: 1023px) {
 p { line-height: 1.7; }
 .inner_banner_bar { min-height: 260px; }

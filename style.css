@@ -193,6 +193,13 @@ input[type="password"]:focus,
 	text-align: center;
 	color: #182938;
 }
+.page-template-home .tm-row .tm-member h3 {
+	transition: color .25s ease;
+}
+.page-template-home .tm-row .tm-member a:hover h3,
+.page-template-home .tm-row .tm-member a:focus h3 {
+	color: #99D5D7;
+}
 .page-template-home .tm-row .tm-member .photo-wrap {
 	margin-bottom: 45px;
 }
@@ -576,3 +583,30 @@ blockquote p { font-size: 25px; font-weight:700; line-height:1.5; padding:0 !imp
 	0%{opacity:0;-webkit-transform:translateY(-100%);-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-o-transform:translateY(-100%);transform:translateY(-100%)}
 	100%{opacity:1;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}
 }
+
+.desktop-nav {
+	display: none;
+	flex: 1;
+	padding-left: 2rem;
+}
+
+.desktop-nav .menu {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 0 -6px 0 0;
+	padding: 0;
+}
+
+.desktop-nav .menu li {
+	margin-left: 2.2%;
+}
+
+.desktop-nav .menu li a {
+	font-size: 18px;
+	font-weight: 600;
+	padding: 6px;
+	color: #99D5D7;
+}
+

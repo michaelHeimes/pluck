@@ -48,12 +48,19 @@
                 <img class="dark" src="<?php the_field('logo-image3','option'); ?>" alt="">
             </a>
 			
-            <a href="#" class="menu_trigger">Menu</a>
-            
-            <div class="menu_bar">
-                <a href="#" class="close">close</a>
-				<?php wp_nav_menu( array( 'menu' => 'main-menu') ); ?>
+                
+            <div class="desktop-nav">
+                <?php wp_nav_menu( array( 'menu' => 'main-menu') ); ?>
             </div>
+            
+            <a href="#" class="menu_trigger mobile-nav">Menu</a>
+            
+            <div class="menu_bar mobile-nav">
+                <a href="#" class="close">close</a>
+                <?php wp_nav_menu( array( 'menu' => 'main-menu') ); ?>
+            </div>   
+            
+
 			
             <div class="clear"></div>
 		</header>
